@@ -1,0 +1,165 @@
+J01
+Matlus
+018-1234567
+11/12/2023 05:13:21 pm
+aa
+32.0
+Potato
+1
+5.0
+Beef Chop
+1
+20.0
+Fish and Chip
+1
+7.0
+
+J02
+Matlus
+018-1234567
+11/12/2023 05:15:18 pm
+aa
+35.0
+Beef Chop
+1
+20.0
+Goat Chop
+1
+15.0
+
+J03
+Matlus
+018-1234567
+11/12/2023 05:17:12 pm
+bb
+25.0
+Potato
+1
+5.0
+Beef Chop
+1
+20.0
+
+J04
+Matlus
+018-1234567
+11/12/2023 05:18:05 pm
+asd
+32.0
+French Fried
+1
+10.0
+Goat Chop
+1
+15.0
+Fish and Chip
+1
+7.0
+
+J05
+Matlus
+018-1234567
+11/12/2023 05:23:42 pm
+aa
+42.0
+Beef Chop
+1
+20.0
+Goat Chop
+1
+15.0
+Fish and Chip
+1
+7.0
+
+J06
+Matlus
+018-1234567
+11/12/2023 05:27:22 pm
+bb
+22.0
+Goat Chop
+1
+15.0
+Fish and Chip
+1
+7.0
+
+J07
+Matlus
+018-1234567
+11/12/2023 05:30:04 pm
+as
+30.0
+Beef Chop
+1
+20.0
+French Fried
+1
+10.0
+
+J08
+Matlus
+018-1234567
+11/12/2023 07:22:52 PM
+123ae
+12.0
+Potato
+1
+5.0
+Fish and Chip
+1
+7.0
+
+J09
+Matlus
+018-1234567
+11/12/2023 07:23:45 PM
+sdf3
+17.0
+French Fried
+1
+10.0
+Fish and Chip
+1
+7.0
+
+J10
+Matlus
+018-1234567
+11/12/2023 07:33:18 PM
+13asd
+22.0
+Goat Chop
+1
+15.0
+Fish and Chip
+1
+7.0
+
+J11
+Matlus
+018-1234567
+11/12/2023 07:35:11 PM
+asd12
+27.0
+Potato
+1
+5.0
+Goat Chop
+1
+15.0
+Fish and Chip
+1
+7.0
+
+J12
+Matlus
+018-1234567
+11/12/2023 07:37:32 PM
+123asd
+10.0
+French Fried
+1
+10.0
+

@@ -1,0 +1,27 @@
+1, address1, John, 016-3331111, out_for_delivery, R01, 12-May-2023, 0.0
+2, address2, Lam, 016-2221111, out for delivery, R01, 12-May-2023, 5.0
+3, address3, Sam, 016-4221111, pending, R01, 12-May-2023, 5.0
+4, address4, Alex, 016-3251111, waiting_restaurant, R01, 12-May-2023, 5.0
+5, address5, Hwei, 016-3221111, out_for_delivery, R01, -, 0.0
+6, address6, Huawei, 016-3221111, delivered, 12-May-2023, -, 0.0
+7, address7, chingchong, 016-3221111, delivered, R05, -, 0.0
+8, address8, chingchong, 016-3221111, out_for_delivery, R06, -, 0.0
+9, address9, Huawei, 016-3221111, delivered, R01, 12-May-2023, 0.0
+10, address10, Huawei, 016-3221111, delivered, R01, 12-May-2023, 0.0
+11, address11, cHINA, 016-3221111, out_for_delivery, R03, -, 0.0
+12, address12, Lamy, 012-3321111, delivered, R01, 12-May-2023, 5.0
+13, address13, Lamia, 012-2222211, delivered, R01, 12-May-2023, 5.0
+14, address14, Lam, 016-2221111, delivered, R06, 11-May-2023, 5.0
+15, address14, Lam, 016-2221111, out for delivery, R01, 11-April-2023, 5.0
+16, Jon, d, 0, pending, R03, 10/Dec/2023, 5.0
+17, Jon, d, 0, pending, R04, 10/Dec/2023, 5.0
+18, Jon, d, 0, pending, R06, 10/Dec/2023, 5.0
+19, d, Jon, 0, pending, R05, 10/Dec/2023, 5.0
+1, aa, Matlus, 018-1234567, pending, NO RUNNER LEFT, 11/Dec/2023, 5.0
+1, bb, Matlus, 018-1234567, pending, NO RUNNER LEFT, 11/Dec/2023, 5.0
+1, as, Matlus, 018-1234567, pending, NO RUNNER LEFT, 11/Dec/2023, 5.0
+1, 123ae, Matlus, 018-1234567, pending, R02, 11/Dec/2023, 5.0
+1, sdf3, Matlus, 018-1234567, pending, NO RUNNER LEFT, 11/Dec/2023, 5.0
+1, 13asd, Matlus, 018-1234567, pending, NO RUNNER LEFT, 11/Dec/2023, 5.0
+1, asd12, Matlus, 018-1234567, pending, NO RUNNER LEFT, 11/Dec/2023, 5.0
+27, 123asd, Matlus, 018-1234567, pending, NO RUNNER LEFT, 11/Dec/2023, 5.0
