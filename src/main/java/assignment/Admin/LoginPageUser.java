@@ -2,6 +2,7 @@ package assignment.Admin;
 
 import GUI.DeliveryMenuGUI;
 import assignment.Customer.TryMain;
+import Vendor.VendorPageGUI;
 import java.awt.*;
 import java.io.*;
 import java.util.Scanner;
@@ -81,7 +82,8 @@ public class LoginPageUser extends JFrame {
                 // Redirect to the admin page
                 navigateToAdminPage(userID);
             } else if (checkLogin(userID, password) && userID.startsWith("V")) {
-//                
+                VendorPageGUI VendorPageGUI = new VendorPageGUI();
+                dispose();
 //                navigateToUserPage(userID);
             } else if (checkLogin(userID, password) && userID.startsWith("Tp")) {
                 TryMain TryMain = new TryMain();
@@ -90,6 +92,7 @@ public class LoginPageUser extends JFrame {
 //                navigateToUserPage(userID);
             } else if (checkLogin(userID, password) && userID.startsWith("R")) {
                 DeliveryMenuGUI appWindow = new DeliveryMenuGUI(userID);
+                dispose();
 //                navigateToUserPage(userID);
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid user ID or password. Please try again.");

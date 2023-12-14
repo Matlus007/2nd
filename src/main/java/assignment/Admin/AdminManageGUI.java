@@ -252,7 +252,8 @@ public class AdminManageGUI implements ActionListener {
                     writer.println();
                 }
                 writer.close();
-                System.exit(0);
+                new AdminPageGUI();
+                frame.dispose();
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -342,8 +343,8 @@ public class AdminManageGUI implements ActionListener {
     public void showAdminManageGUI() {
         frame.setVisible(true);
     }
-    
-    public static void main(String[] args) {
-        new AdminManageGUI();
-    }
+//    
+//    public static void main(String[] args) {
+//        new AdminManageGUI();
+//    }
 }

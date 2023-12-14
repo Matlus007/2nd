@@ -3,7 +3,7 @@ package Vendor;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
- 
+
 public class centerAlignTable {
     public static void centerAlignTable(JTable table) {
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();

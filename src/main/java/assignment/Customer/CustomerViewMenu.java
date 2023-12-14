@@ -78,10 +78,16 @@ public class CustomerViewMenu extends JFrame {
             while (scanner.hasNext()) {
                 String name = scanner.nextLine();
                 double price = Double.parseDouble(scanner.nextLine());
+                String status = scanner.nextLine();
+                System.out.println(status);
                 scanner.nextLine();
-                Product product = new Product(name, price);
-                products.add(product);
-                itemPriceMap.put(name, price);
+                
+                if (status.equals("Available")){
+                    System.out.println("yes");
+                    Product product = new Product(name, price);
+                    products.add(product);
+                    itemPriceMap.put(name, price);
+                }
             }
             scanner.close();
         } catch (FileNotFoundException | NumberFormatException e) {

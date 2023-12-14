@@ -1,18 +1,8 @@
+Chicken
+10.0
+Sold Out
+
 Chicken Chop
-10.0
-
-Goat Chop
 15.0
-
-Beef Chop
-20.0
-
-Fish and Chip
-7.0
-
-French Fried
-10.0
-
-Potato
-5.0
+Available
 

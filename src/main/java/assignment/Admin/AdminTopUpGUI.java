@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -18,9 +17,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
 
-public class AdminTopUpGUI {
+public class AdminTopUpGUI extends JFrame{
 
     private static final String BALANCE_FILE_PATH = "Balance.txt";
     private JFrame frame;
@@ -28,7 +26,7 @@ public class AdminTopUpGUI {
     private JTextField userIDTextField;
     private JTextField topUpTextField;
 
-    private void initialize() throws IOException {
+    public AdminTopUpGUI(){
         frame = new JFrame("Admin Top-Up");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 200);
@@ -52,18 +50,13 @@ public class AdminTopUpGUI {
         backButton.setBackground(Color.decode("#ADD8E6"));
         nextButton.setBackground(Color.decode("#ADD8E6"));
 
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Implement the Back button logic if needed
-            }
+        backButton.addActionListener((ActionEvent e) -> {
+            new AdminPageGUI();
+            frame.dispose();
         });
 
-        nextButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                performTopUp();
-            }
+        nextButton.addActionListener((ActionEvent e) -> {
+            performTopUp();
         });
 
         southPanel.add(backButton);
@@ -71,7 +64,8 @@ public class AdminTopUpGUI {
 
         frame.add(centerPanel, BorderLayout.CENTER);
         frame.add(southPanel, BorderLayout.SOUTH);
-
+        
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 
@@ -135,7 +129,6 @@ public class AdminTopUpGUI {
             }
 
         } catch (IOException | NumberFormatException e) {
-            e.printStackTrace();
         } finally {
             try {
                 if (reader != null) {
@@ -145,19 +138,16 @@ public class AdminTopUpGUI {
                     writer.close();
                 }
             } catch (IOException e) {
-                e.printStackTrace();
             }
         }
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            try {
-                new AdminTopUpGUI().initialize();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-    }
+//
+//    public static void main(String[] args) {
+//        SwingUtilities.invokeLater(() -> {
+//            new AdminTopUpGUI();
+//        });
+//    }
+    
+    
 }
 

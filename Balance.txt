@@ -1,0 +1,24 @@
+Tp003
+Wong Xiao Xiang
+0.0
+
+Tp002
+Han Xiao Shan
+0.0
+
+Tp001
+Ng Qi Hao
+700.0
+
+Tp006
+ltk
+281.0
+
+Tp005
+hsw
+223.0
+
+Tp004
+hhd
+158.0
+

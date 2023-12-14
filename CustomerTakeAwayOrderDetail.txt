@@ -1,0 +1,17 @@
+69.0
+Potato
+1
+5.0
+French Fried
+1
+10.0
+Goat Chop
+2
+15.0
+Chicken Chop
+1
+10.0
+Fish and Chip
+2
+7.0
+

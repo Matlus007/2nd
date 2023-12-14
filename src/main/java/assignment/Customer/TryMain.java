@@ -10,7 +10,6 @@ public class TryMain {
     }
     
     public static void main(String[] args) {
-        // Create an instance of TryMain to invoke the constructor
         TryMain tryMain = new TryMain();
     }
 }

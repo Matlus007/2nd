@@ -3,7 +3,8 @@ package assignment.Admin;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,7 +15,7 @@ public class AdminReceiptGUI extends JFrame {
     private String userID;
     private double topUpAmount;
 
-    public AdminReceiptGUI() {
+    public AdminReceiptGUI(String enteredCustomerID, double topUpAmount) {
         setTitle("Transaction Receipt Generator");
         setSize(400, 200);
 
@@ -23,7 +24,7 @@ public class AdminReceiptGUI extends JFrame {
 
         JPanel inputPanel = new JPanel(new GridLayout(3, 2));
         JLabel userIDLabel = new JLabel("UserID:");
-        userIDField = new JTextField(userID);
+        userIDField = new JTextField(String.valueOf(enteredCustomerID));
         userIDField.setEditable(false);
         JLabel userNameLabel = new JLabel("Customer Name:");
         userNameField = new JTextField();
@@ -46,20 +47,21 @@ public class AdminReceiptGUI extends JFrame {
         mainPanel.add(inputPanel, BorderLayout.NORTH);
         mainPanel.add(buttonPanel, BorderLayout.CENTER);
 
-        generateButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                generateReceipt();
+        generateButton.addActionListener((ActionEvent e) -> {
+            generateReceipt(enteredCustomerID, topUpAmount);
+        });
+        
+        add(mainPanel);
+        
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                new AdminPageGUI();
             }
         });
-
-        add(mainPanel);
     }
 
-    AdminReceiptGUI(String enteredCustomerID, double topUpAmount) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void generateReceipt() {
+    private void generateReceipt(String CustomerID, double TotalAmount) {
         String customerName = userNameField.getText();
         String totalAmountText = totalAmountField.getText();
         double totalAmount = 0.0;
@@ -90,33 +92,24 @@ public class AdminReceiptGUI extends JFrame {
         String transactionDate = dateFormat.format(new Date());
 
         StringBuilder receiptText = new StringBuilder();
-        receiptText.append("University Food Ordering System\n");
-        receiptText.append("Jalan Teknologi 5, Taman Teknologi Malaysia,\n");
-        receiptText.append("57000 Kuala Lumpur,\n");
-        receiptText.append("Wilayah Persekutuan Kuala Lumpur\n");
-        receiptText.append("Tel:03-8996 1000\n");
-        receiptText.append("www.apu.com\n\n\n");
-        receiptText.append("Transaction Receipt\n");
-        receiptText.append("-----------------------------------------\n");
-        receiptText.append("Date: ").append(transactionDate).append("\n");
-        receiptText.append("Customer: ").append(customerName).append("\n");
-        receiptText.append("Total Reload Amount: RM").append(String.format("%.2f", totalAmount)).append("\n");
-        receiptText.append("Balance: RM\n");
-        receiptText.append("Thank you!");
+        receiptText.append(" University Food Ordering System\n");
+        receiptText.append(" Jalan Teknologi 5, Taman Teknologi Malaysia,\n");
+        receiptText.append(" 57000 Kuala Lumpur,\n");
+        receiptText.append(" Wilayah Persekutuan Kuala Lumpur\n");
+        receiptText.append(" Tel:03-8996 1000\n");
+        receiptText.append(" www.apu.com\n\n\n");
+        receiptText.append(" Transaction Receipt\n");
+        receiptText.append(" -----------------------------------------\n");
+        receiptText.append(" Date: ").append(transactionDate).append("\n");
+        receiptText.append(" Customer: ").append(customerName).append("\n");
+        receiptText.append(" Total Reload Amount: RM").append(String.format("%.2f", totalAmount)).append("\n");
+        receiptText.append(" Balance: RM\n");
+        receiptText.append(" Thank you!");
 
         receiptTextArea.setText(receiptText.toString());
 
         receiptFrame.add(receiptTextArea, BorderLayout.CENTER);
         receiptFrame.setLocationRelativeTo(this); // Center receiptFrame relative to AdminReceiptGeneratorFrame
         receiptFrame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new AdminReceiptGUI();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
-        });
     }
 }

@@ -86,18 +86,23 @@ public class AdminPageGUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (operation.equals("Modify")) {
-                dispose();
-                // Open the AdminManageGUI when "Modify" button is clicked
-                new AdminManageGUI();
-            } else if (operation.equals("Top-Up")) {
-                dispose();
-                new AdminTopUpGUI();
-            } else if (operation.equals("Log-Out")) {
-                // Exit the program when "Log-Out" button is clicked
-                System.exit(0);
-            } else {
-                JOptionPane.showMessageDialog(null, "Executing " + operation + " operation...");
+            switch (operation) {
+                case "Modify":
+                    dispose();
+                    // Open the AdminManageGUI when "Modify" button is clicked
+                    new AdminManageGUI();
+                    break;
+                case "Top-Up":
+                     new assignment.Admin.AdminTopUpGUI();
+                    System.out.print("yes");
+                    dispose();
+                    break;
+                case "Log-Out":
+                    // Exit the program when "Log-Out" button is clicked
+                    new LoginPageUser();
+                default:
+                    JOptionPane.showMessageDialog(null, "Executing " + operation + " operation...");
+                    break;
             }
         }
     }

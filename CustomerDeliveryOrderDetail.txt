@@ -1,0 +1,14 @@
+52.0
+Beef Chop
+1
+20.0
+Goat Chop
+1
+15.0
+French Fried
+1
+10.0
+Fish and Chip
+1
+7.0
+
